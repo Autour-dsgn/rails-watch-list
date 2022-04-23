@@ -1,5 +1,4 @@
 <h1>List of film categories</h1>
-
 <ul>
   <% @lists.each do |list| %>
     <li><%= link_to list.name, list_path(list) %></li>
