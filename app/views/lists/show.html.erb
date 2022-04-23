@@ -7,4 +7,6 @@
   <% end %>
 </ul>
 
+
+<%= link_to 'Detete this list', list_path(@list), method: :delete, data: { confirm: 'Are you sure you want to delete this list?' } %>
 <%= link_to 'Back to the lists', lists_path %>
