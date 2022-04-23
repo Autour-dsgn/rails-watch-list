@@ -1,0 +1,10 @@
+<h1>Here the detail of <%= @list.name %></h1>
+
+<ul>
+  <% @list.movies.each do |movie| %>
+      <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
+      <li><%= bookmark.comment %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Back to the lists', lists_path %>

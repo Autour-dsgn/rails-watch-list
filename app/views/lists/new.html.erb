@@ -1,0 +1,8 @@
+<h1>Create your list category</h1>
+
+<%= simple_form_for @list do |f| %>
+  <%= f.input :name, placeholder: "Add a list name" %>
+  <%= f.button :submit %>
+<% end %>
+
+<%= link_to 'Back to the lists', lists_path %>
