@@ -7,11 +7,13 @@
       <%= movie.overview %></small>
       <br>
       <%= bookmark.comment %>
-      <%= link_to 'Delete this movie', @bookmark_path, method: :delete, data: { confirm: "Are you sure you want to remove this movie from your #{@list.name} list"} %>
+      <br>
+      <%= link_to 'Remove this film from my list', @bookmark_path, method: :delete, data: { confirm: "Are you sure you want to remove this movie from your list"}, class: "btn btn-outline-danger" %>
   <% end %>
 </ul>
 
-
-<%= link_to 'Detete this list', list_path(@list), method: :delete, data: { confirm: 'Are you sure you want to delete this list?' } %>
-<%= link_to 'Back to the lists', lists_path %>
-<%= link_to 'Add a movie', new_list_bookmark_path(@list) %>
+<br>
+<%= link_to 'Add a rating', new_list_bookmark_path(@list), class: "btn btn-primary" %>
+<%= link_to 'Detete this list', list_path(@list), method: :delete, data: { confirm: "Are you sure you want to delete this list?" }, class: "btn btn-danger" %>
+<%= link_to 'Go to your lists', lists_path, class: "btn btn-secondary" %>
+<%= link_to 'Go to your movies', movies_path, class: "btn btn-success" %>
